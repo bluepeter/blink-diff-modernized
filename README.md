@@ -43,18 +43,21 @@ A lightweight image comparison tool
 
 ##Installation
 
+This project uses [Bun](https://bun.sh) as its JavaScript runtime and package manager.
+
 Install this module with the following command:
 ```shell
-npm install blink-diff
+bun add blink-diff
 ```
 
-Add the module to your ```package.json``` dependencies:
-```shell
-npm install --save blink-diff
-```
 Add the module to your ```package.json``` dev-dependencies:
 ```shell
-npm install --save-dev blink-diff
+bun add -d blink-diff
+```
+
+Or using npm:
+```shell
+npm install blink-diff
 ```
 
 ##Usage
@@ -252,7 +255,7 @@ Each of the regressions has the screenshot and the output result, highlighting t
 
 Generate the documentation with following command:
 ```shell
-npm run docs
+bun run docs
 ```
 The documentation will be generated in the ```docs``` folder of the module root.
 
@@ -260,9 +263,8 @@ The documentation will be generated in the ```docs``` folder of the module root.
 
 Run the tests with the following command:
 ```shell
-npm run test
+bun test
 ```
-The code-coverage will be written to the ```coverage``` folder in the module root.
 
 ##Project Focus
 There are three types of image comparisons:
@@ -300,14 +302,9 @@ The following third-party libraries are used by this module:
 * pngjs-image: https://github.com/yahoo/pngjs-image
 
 ###Dev-Dependencies
-* chai: http://chaijs.com
-* coveralls: https://github.com/cainus/node-coveralls
-* codeclimate-test-reporter: https://github.com/codeclimate/javascript-test-reporter
-* istanbul: https://github.com/gotwarlost/istanbul
-* mocha: https://github.com/visionmedia/mocha
-* sinon: http://sinonjs.org
-* sinon-chai: https://github.com/domenic/sinon-chai
 * yuidocjs: https://github.com/yui/yuidoc
+
+Tests are run using Bun's built-in test runner.
 
 ##License
 
