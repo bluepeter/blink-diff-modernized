@@ -1,6 +1,6 @@
 
 var assert = require('assert'),
-	PNGImage = require('pngjs-image'),
+	PNGImage = require('./lib/png-image'),
 	util = require('util');
 
 function load(value, defaultValue) {

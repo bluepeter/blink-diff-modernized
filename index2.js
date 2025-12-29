@@ -1,5 +1,5 @@
 
-var PNGImage = require('pngjs-image'),
+var PNGImage = require('./lib/png-image'),
 	Config = require('./lib/configuration/config'),
 	Image = require('./lib/image'),
 	PixelComparator = require('./lib/pixelComparator'),

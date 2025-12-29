@@ -1,7 +1,7 @@
 
 import { describe, it, expect, beforeEach } from "bun:test";
 import BlinkDiff from '../index.js';
-import PNGImage from 'pngjs-image';
+import PNGImage from '../lib/png-image.js';
 import fs from 'fs';
 
 function generateImage (type) {
