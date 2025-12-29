@@ -43,21 +43,14 @@ A lightweight image comparison tool
 
 ##Installation
 
-This project uses [Bun](https://bun.sh) as its JavaScript runtime and package manager.
-
 Install this module with the following command:
 ```shell
-bun add blink-diff
-```
-
-Add the module to your ```package.json``` dev-dependencies:
-```shell
-bun add -d blink-diff
-```
-
-Or using npm:
-```shell
 npm install blink-diff
+```
+
+Or using Bun:
+```shell
+bun add blink-diff
 ```
 
 ##Usage
@@ -255,7 +248,7 @@ Each of the regressions has the screenshot and the output result, highlighting t
 
 Generate the documentation with following command:
 ```shell
-bun run docs
+npm run docs
 ```
 The documentation will be generated in the ```docs``` folder of the module root.
 
@@ -265,6 +258,8 @@ Run the tests with the following command:
 ```shell
 bun test
 ```
+
+Note: Tests use Bun's built-in test runner and require Bun to run.
 
 ##Project Focus
 There are three types of image comparisons:
