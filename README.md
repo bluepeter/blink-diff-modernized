@@ -70,8 +70,8 @@ The command-line tool exposes a couple of flags and parameters for the compariso
 --compose-ltr       Compose output image from left to right
 --compose-ttb       Compose output image from top to bottom
 --hide-shift        Hides shift highlighting (default: false)
---h-shift           Acceptable horizontal shift of pixel. (default: 0)
---v-shift           Acceptable vertical shift of pixel. (default: 0)
+--h-shift           Acceptable horizontal shift of pixel. (default: 2)
+--v-shift           Acceptable vertical shift of pixel. (default: 2)
 --block-out x,y,w,h Block-out area. Can be repeated multiple times.
 --version           Print version
 --help              This help
