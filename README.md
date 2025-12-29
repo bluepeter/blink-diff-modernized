@@ -293,11 +293,7 @@ Also, even if you simply gave us an idea for a feature and did not actually writ
 The following third-party libraries are used by this module:
 
 ###Dependencies
-* promise: https://github.com/then/promise
 * pngjs-image: https://github.com/yahoo/pngjs-image
-
-###Dev-Dependencies
-* yuidocjs: https://github.com/yui/yuidoc
 
 Tests are run using Bun's built-in test runner.
 

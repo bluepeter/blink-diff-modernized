@@ -1,7 +1,7 @@
 
 var assert = require('assert'),
 	PNGImage = require('pngjs-image'),
-	Promise = require('promise');
+	util = require('util');
 
 function load(value, defaultValue) {
 	return (value == null) ? defaultValue : value;
@@ -325,7 +325,7 @@ BlinkDiff.prototype = {
 	 * @return {Promise}
 	 */
 	runWithPromise: function () {
-		return Promise.denodeify(this.run).call(this);
+		return util.promisify(this.run.bind(this))();
 	},
 
 	/**
@@ -700,10 +700,10 @@ BlinkDiff.prototype = {
 	_loadImage: function (path, image) {
 
 		if (image instanceof Buffer) {
-			return Promise.denodeify(PNGImage.loadImage).call(PNGImage, image);
+			return util.promisify(PNGImage.loadImage.bind(PNGImage))(image);
 
 		} else if ((typeof path === 'string') && !image) {
-			return Promise.denodeify(PNGImage.readImage).call(PNGImage, path);
+			return util.promisify(PNGImage.readImage.bind(PNGImage))(path);
 
 		} else {
 			return image;

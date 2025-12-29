@@ -4,7 +4,7 @@ var PNGImage = require('pngjs-image'),
 	Image = require('./lib/image'),
 	PixelComparator = require('./lib/pixelComparator'),
 	constants = require('./lib/constants'),
-	Base = require('preceptor-core').Base;
+	Base = require('./lib/core').Base;
 
 /**
  * @class BlinkDiff
