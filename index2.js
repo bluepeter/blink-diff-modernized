@@ -68,7 +68,7 @@ var BlinkDiff = Base.extend(
 		 * @param {string} text
 		 */
 		log: function (text) {
-			if (this._configuration.isVerboseMode()) {
+			if (this._configuration && this._configuration.isVerboseMode && this._configuration.isVerboseMode()) {
 				console.log(text);
 			}
 		},

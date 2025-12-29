@@ -10,26 +10,24 @@ try {
 
 	var compatibility = new Compatibility(options);
 
-	var diff = new BlinkDiff(compatibility.generate());
-	if (options.verbose) {
-		diff.verbose = true;
-	}
+	var config = compatibility.generate();
+	var diff = new BlinkDiff(config);
 
-	// Setup console logger
+	// Setup console logger - use config's verbose mode
 	diff.log = function (text) {
-		if (this.verbose) {
+		if (config.verbose) {
 			console.log(text);
 		}
 	};
 
-	if (diff.verbose) {
+	if (config.verbose) {
 		console.time("Time");
 	}
 	var result = diff.process();
 
 	var passed = diff.hasPassed(result.code);
 
-	if (diff.verbose) {
+	if (config.verbose) {
 		console.timeEnd("Time");
 
 		console.log(
@@ -43,7 +41,7 @@ try {
 	}
 
 	if (passed) {
-		if (diff.verbose) {
+		if (config.verbose) {
 			console.log("PASS");
 		}
 	} else {
@@ -237,6 +235,7 @@ function parseArgs(argv) {
 				}
 			} else if (argv[i] == "--version") {
 				console.log("Blink-Diff " + BlinkDiff.version);
+				process.exit(0);
 			} else if (imageCount < 2) {
 				++imageCount;
 				if (imageCount == 1) {
