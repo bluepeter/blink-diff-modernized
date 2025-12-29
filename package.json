@@ -4,19 +4,17 @@
   "description": "A lightweight image comparison tool",
   "license": "MIT",
   "main": "index.js",
-  "bugs": "https://github.com/yahoo/blink-diff/issues",
-  "homepage": "https://github.com/yahoo/blink-diff",
+  "bugs": "https://github.com/bluepeter/blink-diff-modernized/issues",
+  "homepage": "https://github.com/bluepeter/blink-diff-modernized",
   "bin": {
     "blink-diff": "bin/blink-diff"
   },
   "author": {
-    "name": "Marcel Erz",
-    "email": "erz@yahoo-inc.com",
-    "url": "http://www.marcelerz.com"
+    "name": "bluepeter"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yahoo/blink-diff.git"
+    "url": "https://github.com/bluepeter/blink-diff-modernized.git"
   },
   "keywords": [
     "image-diff",
